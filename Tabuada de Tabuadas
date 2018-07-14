@@ -1,0 +1,44 @@
+algoritmo "semnome"
+// Fun��o : Exemplificar preechimento de matriz e tabuada de tabuadas de b�nus.
+// Autor : Andr� Felipe
+// Data : 14/07/2018
+// Se��o de Declara��es 
+var
+   matriz: vetor[2..9,2..9] de inteiro
+   i,j: inteiro
+inicio
+// Tabuada de tabuadas
+para i de 2 ate 9 faca
+   escreval("Tabuada de ",i,":")
+   escreval()
+   para j de 2 ate 9 faca
+      escreval(i," x", j," = ",i*j)
+      matriz[i,j] <- i*j
+   fimpara
+   escreval()
+fimpara
+
+// mostrando resultado final da matriz(como tabela)
+para i de 2 ate 9 faca
+   escreval()
+   para j de 2 ate 9 faca
+      escreva(matriz[i,j])    //essa � a parte que importa
+      se i = 2 entao          //fix no espa�amento da primeira linha
+         se (j =2) ou (j =3) ou (j =4) entao
+            escreva(" ")
+         fimse
+      fimse
+      se i = 3 entao          //fix no espa�amento da segunda linha
+         se (j =2) ou (j =3) entao
+            escreva(" ")
+         fimse
+      fimse
+      se i = 4 entao          //fix no espa�amento da terceira linha
+         se (j =2) entao
+            escreva(" ")
+         fimse
+      fimse
+      escreva(" | ")
+   fimpara
+fimpara
+fimalgoritmo
